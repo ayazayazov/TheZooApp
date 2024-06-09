@@ -13,6 +13,9 @@
 		DB1BA8522C0B17A50093E4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1BA8512C0B17A50093E4BF /* Assets.xcassets */; };
 		DB1BA8552C0B17A50093E4BF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DB1BA8542C0B17A50093E4BF /* Base */; };
 		DB1BA85D2C0B18270093E4BF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BA85C2C0B18270093E4BF /* HomeController.swift */; };
+		DBB65C002C1363BA00116013 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65BFF2C1363BA00116013 /* TabBarController.swift */; };
+		DBB65C022C1365B000116013 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65C012C1365B000116013 /* InfoController.swift */; };
+		DBF26BEB2C15E38E00BB198C /* ZooNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF26BEA2C15E38E00BB198C /* ZooNameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		DB1BA8542C0B17A50093E4BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB1BA8562C0B17A50093E4BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1BA85C2C0B18270093E4BF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		DBB65BFF2C1363BA00116013 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DBB65C012C1365B000116013 /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		DBF26BEA2C15E38E00BB198C /* ZooNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 				DB1BA8512C0B17A50093E4BF /* Assets.xcassets */,
 				DB1BA8532C0B17A50093E4BF /* LaunchScreen.storyboard */,
 				DB1BA8562C0B17A50093E4BF /* Info.plist */,
+				DBF26BEA2C15E38E00BB198C /* ZooNameCell.swift */,
 			);
 			path = "The Zoo";
 			sourceTree = "<group>";
@@ -71,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				DB1BA85C2C0B18270093E4BF /* HomeController.swift */,
+				DBB65BFF2C1363BA00116013 /* TabBarController.swift */,
+				DBB65C012C1365B000116013 /* InfoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,8 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1BA8492C0B17A30093E4BF /* AppDelegate.swift in Sources */,
+				DBB65C002C1363BA00116013 /* TabBarController.swift in Sources */,
 				DB1BA84B2C0B17A30093E4BF /* SceneDelegate.swift in Sources */,
 				DB1BA85D2C0B18270093E4BF /* HomeController.swift in Sources */,
+				DBB65C022C1365B000116013 /* InfoController.swift in Sources */,
+				DBF26BEB2C15E38E00BB198C /* ZooNameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +318,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ayazayazov.The-Zoo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -334,13 +347,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ayazayazov.The-Zoo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

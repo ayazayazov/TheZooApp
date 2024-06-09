@@ -8,6 +8,9 @@
 import UIKit
 
 class HomeController: UIViewController {
+    
+    @IBOutlet weak var exploreButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +19,10 @@ class HomeController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func exploreButtonTapped(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(identifier: "TabBarController") as! TabBarController
+        navigationController?.show(controller, sender: nil)
     }
-    */
+    
 
 }
