@@ -6,11 +6,22 @@
 //
 
 import UIKit
+import RealmSwift
+
+class ZooListRealm: Object {
+    @Persisted var title: String
+}
 
 class InfoController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var collection: UICollectionView!
+    
+    
+    var items = [ZooListRealm]()
+    let realm = try! Realm()
+    
     var isGridView = false
-    let items = ["abc","qwe","rty","uio","plk","jhg","fds","azx","cvb"]
+//    let items = ["abc","qwe","rty","uio","plk","jhg","fds","azx","cvb"]
     
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -20,11 +31,22 @@ class InfoController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let url = realm.configuration.fileURL {
+            print(url)
+        }
+        
+        fetchItems()
         
         self.searchBar.searchTextField.backgroundColor = .white
         self.searchBar.searchTextField.textColor = .black
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func fetchItems() {
+        let data = realm.objects(ZooListRealm.self)
+        items.append(contentsOf: data)
+        collection.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,7 +55,7 @@ class InfoController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZooNameCell", for: indexPath) as! ZooNameCell
-        cell.zooNameLabel.text = items[indexPath.item]
+        cell.zooNameLabel.text = items[indexPath.item].title
         cell.contentView.layer.cornerRadius = 40
         cell.contentView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
         return cell

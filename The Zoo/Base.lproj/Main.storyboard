@@ -77,9 +77,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSd-tK-34x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711.1627906976746" y="343.13304721030045"/>
+            <point key="canvasLocation" x="3637.4045801526718" y="342.95774647887328"/>
         </scene>
-        <!--Item 1-->
+        <!--Info Controller-->
         <scene sceneID="UPN-ff-xhH">
             <objects>
                 <viewController id="CAb-jE-7YX" customClass="InfoController" customModule="The_Zoo" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,13 +91,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSp-QJ-186">
-                                <rect key="frame" x="161" y="59" width="71" height="48"/>
+                                <rect key="frame" x="161" y="103" width="71" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e47-mb-TdA">
-                                <rect key="frame" x="10" y="117" width="365" height="36"/>
+                                <rect key="frame" x="10" y="161" width="365" height="36"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" text="" placeholder="Search Zoo" translatesAutoresizingMaskIntoConstraints="NO" id="yUE-wD-T7d">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
@@ -131,7 +131,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xp0-qo-ZXr">
-                                <rect key="frame" x="0.0" y="179" width="375" height="590"/>
+                                <rect key="frame" x="0.0" y="223" width="375" height="546"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="k4c-0s-SG8">
                                     <size key="itemSize" width="367" height="68"/>
@@ -199,15 +199,16 @@
                             <constraint firstAttribute="bottom" secondItem="1kR-II-Tc4" secondAttribute="bottom" id="z1f-hJ-1mX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="IuK-Dg-ulo"/>
+                    <navigationItem key="navigationItem" id="ByD-5G-1Wj"/>
                     <connections>
+                        <outlet property="collection" destination="Xp0-qo-ZXr" id="P7N-6H-iUo"/>
                         <outlet property="gridButton" destination="DQd-ow-UtN" id="Vit-yI-Tn5"/>
                         <outlet property="searchBar" destination="yUE-wD-T7d" id="bSI-03-rf2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ar9-gk-zzi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710.6870229007632" y="-298.59154929577466"/>
+            <point key="canvasLocation" x="3637.4045801526718" y="-298.59154929577466"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kxD-CA-74S">
@@ -219,7 +220,7 @@
                         <color key="backgroundColor" red="0.21176470589999999" green="0.22352941179999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="CAb-jE-7YX" kind="relationship" relationship="viewControllers" id="g62-mU-wcj"/>
+                        <segue destination="hyW-kc-gHD" kind="relationship" relationship="viewControllers" id="g62-mU-wcj"/>
                         <segue destination="bo8-Uw-o9k" kind="relationship" relationship="viewControllers" id="eE2-S9-xQB"/>
                     </connections>
                 </tabBarController>
@@ -244,6 +245,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ev8-vm-A48" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="jfD-Ur-aZo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hyW-kc-gHD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="IuK-Dg-ulo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="imo-so-1bd">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CAb-jE-7YX" kind="relationship" relationship="rootViewController" id="TSn-qy-4G3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHd-iB-Tkq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2710.6870229007632" y="-298.59154929577466"/>
         </scene>
     </scenes>
     <resources>

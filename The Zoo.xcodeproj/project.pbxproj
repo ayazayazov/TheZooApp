@@ -15,6 +15,7 @@
 		DB1BA85D2C0B18270093E4BF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BA85C2C0B18270093E4BF /* HomeController.swift */; };
 		DBB65C002C1363BA00116013 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65BFF2C1363BA00116013 /* TabBarController.swift */; };
 		DBB65C022C1365B000116013 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65C012C1365B000116013 /* InfoController.swift */; };
+		DBD6522E2C173BB800CF63A6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBD6522D2C173BB800CF63A6 /* RealmSwift */; };
 		DBF26BEB2C15E38E00BB198C /* ZooNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF26BEA2C15E38E00BB198C /* ZooNameCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD6522E2C173BB800CF63A6 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,9 @@
 			dependencies = (
 			);
 			name = "The Zoo";
+			packageProductDependencies = (
+				DBD6522D2C173BB800CF63A6 /* RealmSwift */,
+			);
 			productName = "The Zoo";
 			productReference = DB1BA8452C0B17A30093E4BF /* The Zoo.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +133,9 @@
 				Base,
 			);
 			mainGroup = DB1BA83C2C0B17A30093E4BF;
+			packageReferences = (
+				DBD6522C2C173BB800CF63A6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = DB1BA8462C0B17A30093E4BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBD6522C2C173BB800CF63A6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.51.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBD6522D2C173BB800CF63A6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBD6522C2C173BB800CF63A6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB1BA83D2C0B17A30093E4BF /* Project object */;
 }
