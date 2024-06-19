@@ -11,6 +11,8 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var exploreButton: UIButton!
     
+    let userDefaults = UserDefaults.standard
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,7 @@ class HomeController: UIViewController {
     
 
     @IBAction func exploreButtonTapped(_ sender: Any) {
+        userDefaults.setValue(true, forKey: "isExploreButtonTapped")
         let controller = storyboard?.instantiateViewController(identifier: "TabBarController") as! TabBarController
         navigationController?.show(controller, sender: nil)
     }

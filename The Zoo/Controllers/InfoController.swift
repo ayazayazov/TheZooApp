@@ -6,56 +6,55 @@
 //
 
 import UIKit
-import RealmSwift
-
-class ZooListRealm: Object {
-    @Persisted var title: String
-}
 
 class InfoController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collection: UICollectionView!
-    
-    
-    var items = [ZooListRealm]()
-    let realm = try! Realm()
+    @IBOutlet weak var searchBarView: UIView!
+    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet weak var gridButton: UIButton!
     
     var isGridView = false
-//    let items = ["abc","qwe","rty","uio","plk","jhg","fds","azx","cvb"]
+    var zooList = [ZooListModel]()
     
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var gridButton: UIButton!
+//    let blurEffect = UIBlurEffect(style: .light)
+//    let blurEffectView = UIVisualEffectView(effect: blurEffect)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let url = realm.configuration.fileURL {
-            print(url)
-        }
-        
-        fetchItems()
-        
-        self.searchBar.searchTextField.backgroundColor = .white
-        self.searchBar.searchTextField.textColor = .black
+        self.parseCountryFile()
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.isHidden = true
+        searchBarView.layer.cornerRadius = 12
     }
     
-    func fetchItems() {
-        let data = realm.objects(ZooListRealm.self)
-        items.append(contentsOf: data)
-        collection.reloadData()
+    func parseCountryFile() {
+        if let file = Bundle.main.url(forResource: "ZooListData", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: file)
+                zooList = try JSONDecoder().decode([ZooListModel].self, from: data)
+                collection.reloadData()
+            } catch {
+                showError(message: error.localizedDescription)
+            }
+        }
+    }
+    
+    func showError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return zooList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZooNameCell", for: indexPath) as! ZooNameCell
-        cell.zooNameLabel.text = items[indexPath.item].title
+        cell.zooNameLabel?.text = zooList[indexPath.item].name
         cell.contentView.layer.cornerRadius = 40
         cell.contentView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
         return cell
