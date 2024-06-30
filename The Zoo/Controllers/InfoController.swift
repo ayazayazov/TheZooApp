@@ -60,6 +60,13 @@ class InfoController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(identifier: "ZooInfoController") as! ZooInfoController
+//        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+//        navigationController?.show(controller, sender: nil)
+    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -73,9 +80,6 @@ class InfoController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func gridButtonTapped(_ sender: UIButton) {
-        
-    
-        
         if isGridView {
            
             gridButton.setImage(UIImage(systemName: "square.grid.2x2.fill"), for: .normal)
