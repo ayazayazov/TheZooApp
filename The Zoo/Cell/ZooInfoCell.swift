@@ -8,6 +8,12 @@
 import UIKit
 
 class ZooInfoCell: UITableViewCell {
+    
+    @IBOutlet weak var zooNameLabel: UILabel!
+    @IBOutlet weak var zooCountryLabel: UILabel!
+    @IBOutlet weak var zooInfoTextView: UITextView!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

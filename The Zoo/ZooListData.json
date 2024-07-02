@@ -1,8 +1,9 @@
 [
     {
-        "name": "Taronga Zoo",
-        "country": "Australia",
-        "info": "jenijdnwe",
+        "name": "San Diego Zoo",
+        "country": "San Diego, California, USA",
+        "image": "san-diego-zoo",
+        "info": "The San Diego Zoo is a zoo in San Diego, California, housing over 12,000 animals of more than 680 species and subspecies on 100 acres (40 ha) of Balboa Park. The zoo is the most visited in the United States. Travelers have cited it as one of the best zoos in the world. The zoo was a pioneer in the concept of open-air, cage-less exhibits that recreate natural animal habitats. It sits on land leased from the City of San Diego. The zoo is an accredited member of the Association of Zoos and Aquariums (AZA), the American Alliance of Museums (AAM), and the World Association of Zoos and Aquariums (WAZA). Its parent organization, the San Diego Zoo Wildlife Alliance, is a private nonprofit conservation organization, and has one of the largest zoological membership associations in the world. The San Diego Zoo Wildlife Alliance also operates the San Diego Zoo Safari Park.",
         "animals": [
             {
                 "name": "asfwef",

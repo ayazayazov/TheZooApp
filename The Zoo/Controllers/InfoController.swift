@@ -64,6 +64,7 @@ class InfoController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(identifier: "ZooInfoController") as! ZooInfoController
 //        controller.modalPresentationStyle = .fullScreen
+        controller.zooIndex = indexPath.item
         present(controller, animated: true)
 //        navigationController?.show(controller, sender: nil)
     }

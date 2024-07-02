@@ -10,6 +10,7 @@ import Foundation
 struct ZooListModel: Codable {
     let name: String?
     let country: String?
+    let image: String?
     let info: String?
     let animals: [Animals]?
 }

@@ -14,6 +14,8 @@
 		DB1BA8552C0B17A50093E4BF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DB1BA8542C0B17A50093E4BF /* Base */; };
 		DB1BA85D2C0B18270093E4BF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BA85C2C0B18270093E4BF /* HomeController.swift */; };
 		DB3720062C2C0D1100A50231 /* ZooInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3720052C2C0D1100A50231 /* ZooInfoCell.swift */; };
+		DB50458C2C331C91002088FF /* ZooAnimalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50458B2C331C91002088FF /* ZooAnimalsController.swift */; };
+		DB50458E2C331CDC002088FF /* ZooAnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50458D2C331CDC002088FF /* ZooAnimalCell.swift */; };
 		DB5AE40D2C19BFF900DD0286 /* ZooListData.json in Resources */ = {isa = PBXBuildFile; fileRef = DB5AE40C2C19BFF900DD0286 /* ZooListData.json */; };
 		DB8DC8802C1D8E050009EAF8 /* ZooListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DC87F2C1D8E050009EAF8 /* ZooListModel.swift */; };
 		DBB65C002C1363BA00116013 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65BFF2C1363BA00116013 /* TabBarController.swift */; };
@@ -32,6 +34,8 @@
 		DB1BA8562C0B17A50093E4BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1BA85C2C0B18270093E4BF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		DB3720052C2C0D1100A50231 /* ZooInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoCell.swift; sourceTree = "<group>"; };
+		DB50458B2C331C91002088FF /* ZooAnimalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalsController.swift; sourceTree = "<group>"; };
+		DB50458D2C331CDC002088FF /* ZooAnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalCell.swift; sourceTree = "<group>"; };
 		DB5AE40C2C19BFF900DD0286 /* ZooListData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ZooListData.json; sourceTree = "<group>"; };
 		DB8DC87F2C1D8E050009EAF8 /* ZooListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooListModel.swift; sourceTree = "<group>"; };
 		DBB65BFF2C1363BA00116013 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				DBB65BFF2C1363BA00116013 /* TabBarController.swift */,
 				DBB65C012C1365B000116013 /* InfoController.swift */,
 				DBED35222C258DB600F28350 /* ZooInfoController.swift */,
+				DB50458B2C331C91002088FF /* ZooAnimalsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			children = (
 				DBF26BEA2C15E38E00BB198C /* ZooNameCell.swift */,
 				DB3720052C2C0D1100A50231 /* ZooInfoCell.swift */,
+				DB50458D2C331CDC002088FF /* ZooAnimalCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 				DB1BA8492C0B17A30093E4BF /* AppDelegate.swift in Sources */,
 				DBB65C002C1363BA00116013 /* TabBarController.swift in Sources */,
 				DBED35232C258DB600F28350 /* ZooInfoController.swift in Sources */,
+				DB50458E2C331CDC002088FF /* ZooAnimalCell.swift in Sources */,
 				DB1BA84B2C0B17A30093E4BF /* SceneDelegate.swift in Sources */,
+				DB50458C2C331C91002088FF /* ZooAnimalsController.swift in Sources */,
 				DB8DC8802C1D8E050009EAF8 /* ZooListModel.swift in Sources */,
 				DB1BA85D2C0B18270093E4BF /* HomeController.swift in Sources */,
 				DB3720062C2C0D1100A50231 /* ZooInfoCell.swift in Sources */,
@@ -356,7 +364,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +393,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
