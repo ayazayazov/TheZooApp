@@ -8,5 +8,6 @@
 import UIKit
 
 class ZooAnimalCell: UICollectionViewCell {
-    
+    @IBOutlet weak var animalImageView: UIImageView!
+    @IBOutlet weak var animalNameLabel: UILabel!
 }

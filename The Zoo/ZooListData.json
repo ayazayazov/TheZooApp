@@ -6,16 +6,22 @@
         "info": "The San Diego Zoo is a zoo in San Diego, California, housing over 12,000 animals of more than 680 species and subspecies on 100 acres (40 ha) of Balboa Park. The zoo is the most visited in the United States. Travelers have cited it as one of the best zoos in the world. The zoo was a pioneer in the concept of open-air, cage-less exhibits that recreate natural animal habitats. It sits on land leased from the City of San Diego. The zoo is an accredited member of the Association of Zoos and Aquariums (AZA), the American Alliance of Museums (AAM), and the World Association of Zoos and Aquariums (WAZA). Its parent organization, the San Diego Zoo Wildlife Alliance, is a private nonprofit conservation organization, and has one of the largest zoological membership associations in the world. The San Diego Zoo Wildlife Alliance also operates the San Diego Zoo Safari Park.",
         "animals": [
             {
-                "name": "asfwef",
-                "info": "wedejwin"
+                "name": "North American beaver",
+                "info": "The North American beaver (Castor canadensis) is one of two extant beaver species, along with the Eurasian beaver (Castor fiber).[23] It is native to North America and has been introduced in South America (Patagonia) and Europe (primarily Finland and Karelia). The North American beaver is one of the official national wildlife of Canada symbols and is the official state mammal of Oregon and New York.[28] North American beavers are widespread across the continental United States, Canada, southern Alaska, and some parts of northern Mexico.",
+                "image": "north-american-beaver",
+                "imageTransparent": "american-beaver-transparent"
             },
             {
-                "name": "asfwef",
-                "info": "wedejwin"
+                "name": "Raccoon",
+                "info": "The raccoon (/rəˈkuːn/ or US: /ræˈkuːn/ ⓘ, Procyon lotor), also spelled racoon[3] and sometimes called the common raccoon or northern raccoon to distinguish it from the other species, is a mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm (16 to 28 in), and a body weight of 5 to 26 kg (11 to 57 lb). Its grayish coat mostly consists of dense underfur, which insulates it against cold weather. The animal's most distinctive features include its extremely dexterous front paws, its facial mask, and its ringed tail, which are common themes in the mythologies of the Indigenous peoples of the Americas surrounding the species. ",
+                "image": "raccoon",
+                "imageTransparent": ""
             },
             {
-                "name": "asfwef",
-                "info": "wedejwin"
+                "name": "Scarlet macaw",
+                "info": "The scarlet macaw (Ara macao) is a large yellow, red and blue Neotropical parrot native to humid evergreen forests of the Americas. Its range extends from southeastern Mexico to Peru, Ecuador, Colombia, Bolivia, Venezuela and Brazil in lowlands of 500 m (1,600 ft) (at least formerly) up to 1,000 m (3,300 ft), the Caribbean island of Trinidad, as well as the Pacific island of Coiba.[1] Formerly, the northern extent of its range included southern Tamaulipas. In some areas, it has suffered local extinction because of habitat destruction, or capture for the parrot trade, but in other areas, it remains fairly common.",
+                "image": "scarlet-macaw",
+                "imageTransparent": "scarlet-macaw-transparent"
             }
         ]
     },

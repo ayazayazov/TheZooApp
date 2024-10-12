@@ -18,6 +18,8 @@ struct ZooListModel: Codable {
 struct Animals: Codable {
     let name: String?
     let info: String?
+    let image: String?
+    let imageTransparent: String?
 }
 
 /*

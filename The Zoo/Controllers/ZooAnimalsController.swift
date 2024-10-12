@@ -44,12 +44,26 @@ class ZooAnimalsController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
+        zooList[zooIndex ?? 0].animals?.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZooAnimalCell", for: indexPath) as! ZooAnimalCell
+        cell.layer.cornerRadius = 60
+        cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        cell.animalImageView.layer.cornerRadius = 50
+        cell.animalImageView.layer.borderWidth = 2
+        cell.animalImageView.layer.borderColor = CGColor(red: 167/255, green: 190/255, blue: 121/255, alpha: 1)
+        cell.animalImageView.image = UIImage(named: "\(zooList[zooIndex ?? 0].animals?[indexPath.item].image ?? "background")")
+        cell.animalNameLabel.text = zooList[zooIndex ?? 0].animals?[indexPath.item].name
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "AnimalInfoController") as! AnimalInfoController
+        controller.zooIndex = zooIndex
+        controller.animalIndex = indexPath.item
+        present(controller, animated: true)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
